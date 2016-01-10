@@ -1,0 +1,15 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.outerContainer {
+  width: 75rem;
+  margin: 0 auto; }
+
+.nav {
+  background: #e0e0eb;
+  padding: 0.625rem; }
+  .nav li {
+    display: inline-block; }

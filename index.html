@@ -1,20 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" type="text/css" href="dist/css/styles.css">
+
+     <!-- load angular via CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.0-rc.0/angular-route.min.js"></script>
+
+    <script src="js/app.js"></script>
+
     <title>To-Do-List</title>
 
   </head>
   <body>
-    <h1>Hello, world!</h1>
+  <section class="outerContainer">
+    <ul class="nav">
+        <li><a href="#/"><i class="fa fa-home"></i> To-do-list</a></li>
+        <li><a href="#/d3"><i class="fa "></i>D3</a></li>
+        <li><a href="#/neat"><i class="fa "></i>Neat</a></li>
 
+    </ul>
 
+    <div ng-view></div>
+  </section>
 
-    <!--Angular-->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

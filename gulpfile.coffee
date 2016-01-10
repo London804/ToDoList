@@ -15,7 +15,7 @@ gulp.task 'lint', ->
 
 # Compile Our Sass
 gulp.task 'sass', ->
-  gulp.src('scss/*.scss')
+  gulp.src('sass/*.scss')
   .pipe(sass())
   .pipe gulp.dest('dist/css')
 
@@ -34,7 +34,7 @@ gulp.task 'watch', ->
     'lint'
     'scripts'
   ]
-  gulp.watch 'scss/*.scss', [ 'sass' ]
+  gulp.watch 'sass/*.scss', [ 'sass' ]
   return
 
 # Default Task
