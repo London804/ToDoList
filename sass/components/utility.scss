@@ -1,0 +1,170 @@
+$sidebar-width: 12.5em;
+
+@mixin ellipsis($width: 100%) {
+  display: inline-block;
+  max-width: $width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.u-outerContainer {
+	width: rem(1280);
+	padding: 0 41px;
+	padding-right: 42px;
+	max-width: 80rem;
+	transform: translate3d(0, 0, 0);
+}
+
+.outerContainer--sidebar {
+	width: rem(1000);
+	padding-right: $sidebar-width;
+	padding-left: 0;
+	box-sizing: content-box;
+}
+
+//for applications with ng_sidebar--big
+.u-outerContainer--bigSidebar {
+	width: rem(920);
+	padding-right: 17.5rem;
+	padding-left: 0;
+	box-sizing: content-box;
+}
+
+.u-relative {
+	position: relative;
+}
+
+.u-maxY {
+	height: 100%;
+}
+
+.u-scroll {
+	overflow-y: auto;
+}
+
+.u-hiddenScroll {
+	overflow-y: hidden;
+}
+
+.u-hiddenScrollX {
+	overflow-x: hidden;
+}
+
+.u-spaceBetweenX {
+	justify-content: space-between;
+}
+
+.u-spaceAroundY {
+	align-items: space-around;
+}
+
+.u-spaceAroundX {
+	justify-content: space-around;
+}
+
+.u-maxX {
+	width: 100%;
+}
+
+.u-maxXY {
+	width: 100%;
+	height: 100%;
+}
+
+.u-flex {
+	display: flex;
+}
+
+.u-inlineFlex {
+	display: inline-flex;
+}
+
+.u-wrap {
+	flex-wrap: wrap;
+}
+
+.u-column {
+	flex-direction: column;
+
+	&.u-pullLeft {
+		align-items: flex-start;
+	}
+
+	&.u-pullRight {
+		align-items: flex-end;
+	}
+
+	&.u-spaceBetweenY {
+		justify-content: space-between;
+	}
+}
+
+.u-centerX {
+	display: flex;
+	justify-content: center;
+}
+
+.u-centerY {
+	display: flex;
+	align-items: center;
+}
+
+.u-centerXY {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.u-fillRemaining {
+	flex: 1;
+}
+
+.u-pullRight {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.u-pullLeft {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.u-pullUp {
+	display: flex;
+	align-items: flex-start;
+}
+
+.u-pullDown {
+	display: flex;
+	align-items: flex-end;
+}
+
+.u-forceRender {
+	transform: translate3d(0, 0, 0);
+}
+
+.u-ellipsis {
+	@include ellipsis();
+}
+
+.u-wrap {
+	white-space: normal;
+}
+
+.u-whiteSpace {
+	white-space: nowrap;
+}
+
+.u-preWrap {
+	white-space: pre-wrap;
+}
+
+.t-alignLeft {
+	text-align: left;
+}
+
+.t-alignRight {
+	text-align: right;
+}
