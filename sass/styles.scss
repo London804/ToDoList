@@ -1,5 +1,12 @@
-@import "bourbon/bourbon";
-@import "neat/neat";
+@import "components/bourbon/bourbon";
+@import "components/neat/neat";
+@import "components/colors";
+@import "components/utility";
+@import "components/font";
+
+body {
+    font-family:"proxima-nova-condensed";
+}
 
 .outerContainer {
     width: 75rem;
@@ -7,10 +14,26 @@
 }
 
 .nav {
-    background: #e0e0eb;
-    padding: 0.625rem;
+    display: flex;
+    background: $gray-4;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        width: 25rem;
+        padding: 0 0.625rem;
+        font-weight: 700;
+
+    }
 
     li {
         display: inline-block;
+
+        a {
+            text-decoration: none;
+            list-style-type: none;
+            color: $dark-blue;
+
+        }
     }
 }
