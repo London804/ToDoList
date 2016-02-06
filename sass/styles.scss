@@ -4,6 +4,13 @@
 @import "components/utility";
 @import "components/font";
 
+@mixin appearance($value) {
+    @include prefixer(appearance, $value, webkit moz ms o spec);
+}
+
+$cp-atom: 15px;
+$transition-timing: 0.218s;
+
 body {
     font-family:"proxima-nova-condensed";
 }
@@ -35,5 +42,56 @@ body {
             color: $dark-blue;
 
         }
+    }
+}
+
+.form-controlAdd {
+    width: 25rem;
+    height: 1.875rem;
+    padding: 0.625rem;
+    font-size: 0.75rem;
+    margin-right: $cp-atom;
+}
+
+.form-control {
+    max-width: 37.5rem;
+}
+
+.button {
+    position: relative;
+    height: 1.875rem;
+    min-width: 5.625rem;
+    padding: 0 $cp-atom;
+    outline: 0;
+    border: 0;
+    border-radius: 2px;
+    @include appearance(none);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all $transition-timing ease;
+}
+
+.button--primary {
+    background-color: $gray-10;
+    color: $white;
+    font-size: 0.75rem;
+
+    &:hover {
+        background-color: $teal;
+    }
+
+    &:active {
+        background-color: darken($teal, 5%);
+    }
+}
+
+.button--secondary {
+    background-color: $white;
+    border: 1px solid $gray-7;
+    transition: all $transition-timing ease;
+    cursor: pointer;
+
+    &:hover {
+        border-color: $teal;
     }
 }

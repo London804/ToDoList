@@ -164,3 +164,47 @@ body {
       text-decoration: none;
       list-style-type: none;
       color: #2f6a8a; }
+
+.form-controlAdd {
+  width: 25rem;
+  height: 1.875rem;
+  padding: 0.625rem;
+  font-size: 0.75rem;
+  margin-right: 15px; }
+
+.form-control {
+  max-width: 37.5rem; }
+
+.button {
+  position: relative;
+  height: 1.875rem;
+  min-width: 5.625rem;
+  padding: 0 15px;
+  outline: 0;
+  border: 0;
+  border-radius: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.218s ease; }
+
+.button--primary {
+  background-color: #2b313a;
+  color: white;
+  font-size: 0.75rem; }
+  .button--primary:hover {
+    background-color: #1fbba6; }
+  .button--primary:active {
+    background-color: #1ba593; }
+
+.button--secondary {
+  background-color: white;
+  border: 1px solid #91a0ad;
+  transition: all 0.218s ease;
+  cursor: pointer; }
+  .button--secondary:hover {
+    border-color: #1fbba6; }

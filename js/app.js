@@ -22,7 +22,7 @@ myApp.config(function($routeProvider){
 
 myApp.controller('mainController', ['$scope', function($scope) {
 //the logic for main.html will go here
-	$scope.todos = ['Item 1', 'Item 2', 'Item 3', 'Item 4'];
+	$scope.todos = [];
 	$scope.name = 'main';
 
 	$scope.addTodo = function () {
