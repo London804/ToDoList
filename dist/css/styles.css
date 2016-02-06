@@ -208,3 +208,7 @@ body {
   cursor: pointer; }
   .button--secondary:hover {
     border-color: #1fbba6; }
+
+.input-group {
+  padding: 0.3125rem 0.625rem;
+  cursor: move; }
