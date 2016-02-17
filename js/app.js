@@ -1,4 +1,8 @@
-var myApp = angular.module('myApp', ['ngRoute','ui.sortable']);
+var myApp = angular.module('myApp', ['ngRoute','ui.sortable', 'LocalStorageModule']);
+
+myApp.config(['localStorageServiceProvider', function(localStorageServiceProvider){
+    localStorageServiceProvider.setPrefix('ls');
+  }]);
 
 myApp.config(function($routeProvider){
 
@@ -20,21 +24,26 @@ myApp.config(function($routeProvider){
 	});
 });
 
-myApp.controller('mainController', ['$scope', function($scope) {
+myApp.controller('mainController', function ($scope, localStorageService)  {
 //the logic for main.html will go here
-	$scope.todos = [];
-	$scope.name = 'main';
+	var todosInStore = localStorageService.get('todos');
 
-	$scope.addTodo = function () {
-	  $scope.todos.push($scope.todo);
-	  $scope.todo = '';
-	};
+    $scope.todos = todosInStore || [];
 
-	$scope.removeTodo = function (index) {
-	  $scope.todos.splice(index, 1);
-	};
+    $scope.$watch('todos', function () {
+      localStorageService.set('todos', $scope.todos);
+    }, true);
 
-}]);
+    $scope.addTodo = function () {
+      $scope.todos.push($scope.todo);
+      $scope.todo = '';
+    };
+
+    $scope.removeTodo = function (index) {
+      $scope.todos.splice(index, 1);
+    };
+
+});
 
 myApp.controller('secondController', ['$scope', function($scope) {
 //for d3.html here
